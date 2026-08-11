@@ -18,8 +18,9 @@ namespace AceLand.Injection
         public static object PickExtra(object[] extraArgs, Type type)
         {
             if (extraArgs == null) return null;
-            for (int i = 0; i < extraArgs.Length; i++)
-                if (extraArgs[i] != null && type.IsInstanceOfType(extraArgs[i])) return extraArgs[i];
+            foreach (var t in extraArgs)
+                if (t != null && type.IsInstanceOfType(t)) return t;
+
             return null;
         }
 

@@ -17,7 +17,7 @@ namespace AceLand.Injection
             get
             {
                 var r = _provider?.Invoke();
-                return r != null && !r.IsDisposed ? r : null;
+                return r is { IsDisposed: false } ? r : null;
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿{
   "name": "com.aceland.injection.abstractions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "AceLand Injection Abstractions",
   "description": "Attributes and interfaces for AceLand Injection. Reference this from packages that publish services: no container, no engine dependency, ~15 KB.",
   "unity": "2021.3",

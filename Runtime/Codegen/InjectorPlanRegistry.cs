@@ -5,26 +5,26 @@ namespace AceLand.Injection
 {
     public static class InjectorPlanRegistry
     {
-        static readonly Dictionary<Type, IInjectorPlan> Plans = new Dictionary<Type, IInjectorPlan>();
-        static readonly object Sync = new object();
+        private static readonly Dictionary<Type, IInjectorPlan> plans = new();
+        private static readonly object sync = new();
 
-        public static int Count { get { lock (Sync) return Plans.Count; } }
+        public static int Count { get { lock (sync) return plans.Count; } }
 
         /// <summary>Called from generated module initializers. Safe to call twice.</summary>
         public static void Register(IInjectorPlan plan)
         {
             if (plan?.TargetType == null) return;
-            lock (Sync) Plans[plan.TargetType] = plan;
+            lock (sync) plans[plan.TargetType] = plan;
         }
 
         public static bool TryGet(Type type, out IInjectorPlan plan)
         {
-            lock (Sync) return Plans.TryGetValue(type, out plan);
+            lock (sync) return plans.TryGetValue(type, out plan);
         }
 
         public static IEnumerable<IInjectorPlan> All()
         {
-            lock (Sync) return new List<IInjectorPlan>(Plans.Values);
+            lock (sync) return new List<IInjectorPlan>(plans.Values);
         }
     }
 }
