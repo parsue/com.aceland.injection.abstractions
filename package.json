@@ -1,0 +1,29 @@
+﻿{
+  "name": "com.aceland.injection.abstractions",
+  "version": "0.1.0",
+  "displayName": "AceLand Injection Abstractions",
+  "description": "Attributes and interfaces for AceLand Injection. Reference this from packages that publish services: no container, no engine dependency, ~15 KB.",
+  "unity": "2021.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parsue/com.aceland.injection.abstractions.git"
+  },
+  "author": {
+    "name": "Parsue - AceLand Workshop",
+    "url": "https://www.parsue.io/",
+    "email": "parsue@gmail.com"
+  },
+  "keywords": [
+    "di",
+    "ioc",
+    "dependency-injection",
+    "aceland"
+  ],
+  "publishConfig": {
+    "registry": "https://package.openupm.com"
+  },
+  "documentationUrl": "https://docs.parsue.io/aceland-unity-packages",
+  "type": "utility",
+  "licensesUrl": "https://docs.parsue.io/aceland-unity-packages/getting-started/license",
+  "changelogUrl": "https://docs.parsue.io/aceland-unity-packages/packages/webrequest/change-log"
+}
