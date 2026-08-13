@@ -1,7 +1,14 @@
-﻿{
-  "name": "AceLand.Injection.Abstractions",
-  "rootNamespace": "AceLand.Injection",
-  "references": [],
-  "autoReferenced": true,
-  "noEngineReferences": true
+{
+    "name": "AceLand.Injection.Abstractions",
+    "rootNamespace": "AceLand.Injection",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
