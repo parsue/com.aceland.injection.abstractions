@@ -2,10 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
---- 
+---
+
+## [0.2.0] - 2026-08-13
+- beta published 
 
 ## [0.1.1] - 2026-08-12
-dev optimize and bug fix
+- dev optimize and bug fix
 
 ## [0.1.0] - 2026-08-11
 Repo created, project in dev level, not published.
