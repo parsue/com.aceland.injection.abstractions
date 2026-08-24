@@ -1,9 +1,9 @@
 ﻿{
   "name": "com.aceland.injection.abstractions",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "displayName": "AceLand Injection Abstractions",
   "description": "Attributes and interfaces for AceLand Injection. Reference this from packages that publish services: no container, no engine dependency, ~15 KB.",
-  "unity": "2021.3",
+  "unity": "2022.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/parsue/com.aceland.injection.abstractions.git"
@@ -22,8 +22,8 @@
   "publishConfig": {
     "registry": "https://package.openupm.com"
   },
-  "documentationUrl": "https://docs.parsue.io/aceland-unity-packages",
+  "documentationUrl": "https://docs.parsue.io/aceland-unity-packages/core-packages/injection-exp",
   "type": "utility",
   "licensesUrl": "https://docs.parsue.io/aceland-unity-packages/getting-started/license",
-  "changelogUrl": "https://docs.parsue.io/aceland-unity-packages/packages/webrequest/change-log"
+  "changelogUrl": "https://docs.parsue.io/aceland-unity-packages/core-packages/injection-exp/change-log"
 }
