@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 ---
+# Release - published
+
+## [1.0.0] - 2026-09-07
+- First stable release, aligned with AceLand Injection 1.0.0 (Open Core & Paid Editor Tools).
+- No API changes; attributes and interfaces remain free & open source.
+
+---
 # Exp - published
 
 ## [0.3.0] - 2026-08-24
