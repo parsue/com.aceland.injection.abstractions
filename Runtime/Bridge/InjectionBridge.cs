@@ -8,11 +8,11 @@ namespace AceLand.Injection
     /// </summary>
     public static class InjectionBridge
     {
-        static Func<IObjectResolver> _provider;
+        static Func<IResolver> _provider;
 
         public static bool IsAvailable => _provider != null;
 
-        public static IObjectResolver Global
+        public static IResolver Global
         {
             get
             {
@@ -22,7 +22,7 @@ namespace AceLand.Injection
         }
 
         /// <summary>Called by AceLand.Injection at startup. Not for game code.</summary>
-        public static void SetGlobalProvider(Func<IObjectResolver> provider) => _provider = provider;
+        public static void SetGlobalProvider(Func<IResolver> provider) => _provider = provider;
 
         public static bool TryResolve<T>(out T instance, object id = null)
         {

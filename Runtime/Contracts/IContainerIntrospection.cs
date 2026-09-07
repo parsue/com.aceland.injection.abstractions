@@ -42,14 +42,14 @@ namespace AceLand.Injection
     {
         string Label { get; }
         int Depth { get; }
-        IObjectResolver ParentResolver { get; }
+        IResolver ParentResolver { get; }
 
         /// <summary>Registrations declared on this container only — not inherited.</summary>
         IReadOnlyList<RegistrationInfo> LocalRegistrations { get; }
 
         /// <summary>Which registration, on which container, would satisfy the request.</summary>
         bool TryDescribeResolution(Type contract, object id,
-                                   out RegistrationInfo info, out IObjectResolver owner);
+                                   out RegistrationInfo info, out IResolver owner);
         
         /// <summary>Installers that contributed to this container, in execution order.</summary>
         IReadOnlyList<InstallerInfo> Installers { get; }

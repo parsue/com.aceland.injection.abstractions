@@ -4,7 +4,7 @@ namespace AceLand.Injection
 {
     public static class InjectorPlanUtil
     {
-        public static T Required<T>(IObjectResolver r, string owner, string member, object id = null)
+        public static T Required<T>(IResolver r, string owner, string member, object id = null)
         {
             if (r.TryResolve<T>(out var value, id)) return value;
             throw new InjectionException(
@@ -12,7 +12,7 @@ namespace AceLand.Injection
                 (id != null ? $" #{id}" : "") + " is not registered.");
         }
 
-        public static T Optional<T>(IObjectResolver r, object id = null)
+        public static T Optional<T>(IResolver r, object id = null)
             => r.TryResolve<T>(out var value, id) ? value : default;
 
         public static object PickExtra(object[] extraArgs, Type type)
@@ -24,7 +24,7 @@ namespace AceLand.Injection
             return null;
         }
 
-        public static T Arg<T>(IObjectResolver r, object[] extraArgs, string owner, string member, object id = null)
+        public static T Arg<T>(IResolver r, object[] extraArgs, string owner, string member, object id = null)
         {
             var extra = PickExtra(extraArgs, typeof(T));
             return extra != null ? (T)extra : Required<T>(r, owner, member, id);

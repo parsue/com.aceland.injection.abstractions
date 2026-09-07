@@ -30,7 +30,7 @@ namespace AceLand.Injection
         bool HasMultipleConstructors { get; }
         InjectDependency[] Dependencies { get; }
 
-        object CreateInstance(IObjectResolver resolver, object[] extraArgs);
-        void Inject(object instance, IObjectResolver resolver);
+        object CreateInstance(IResolver resolver, object[] extraArgs);
+        void Inject(object instance, IResolver resolver);
     }
 }

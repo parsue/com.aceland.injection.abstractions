@@ -3,7 +3,7 @@
 namespace AceLand.Injection
 {
     /// <summary>Runtime face of a container. Fully usable from plain C# — no Unity types involved.</summary>
-    public interface IObjectResolver : IDisposable
+    public interface IResolver : IDisposable
     {
         bool IsDisposed { get; }
 
@@ -22,6 +22,6 @@ namespace AceLand.Injection
         object CreateInstance(Type type, params object[] extraArgs);
         T CreateInstance<T>(params object[] extraArgs);
 
-        IObjectResolver CreateScope(Action<IContainerBuilder> configure = null);
+        IResolver CreateScope(Action<IContainerBuilder> configure = null);
     }
 }

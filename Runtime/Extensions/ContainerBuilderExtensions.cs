@@ -16,12 +16,12 @@ namespace AceLand.Injection
             => b.RegisterInstance(typeof(T), instance, ownsInstance);
 
         public static IRegistrationBuilder RegisterFactory<T>(this IContainerBuilder b,
-                                                              Func<IObjectResolver, T> factory, Lifetime lifetime)
+                                                              Func<IResolver, T> factory, Lifetime lifetime)
             => b.RegisterFactory(typeof(T), r => factory(r), lifetime);
 
-        public static IRegistrationBuilder RegisterEntryPoint<T>(this IContainerBuilder b)
+        public static IRegistrationBuilder AddEntryPoint<T>(this IContainerBuilder b)
         {
-            b.RegisterEntryPoint(typeof(T));
+            b.AddEntryPoint(typeof(T));
             return b.Register(typeof(T), Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
         }
 

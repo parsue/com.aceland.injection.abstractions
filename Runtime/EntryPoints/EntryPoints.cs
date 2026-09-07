@@ -14,9 +14,9 @@ namespace AceLand.Injection
     /// Unity installs a SynchronizationContext there.
     /// The token is cancelled when the owning scope is disposed / the app quits.
     /// </summary>
-    public interface IAsyncStartable
+    public interface IAsyncEntryPoint
     {
-        Task StartAsync(CancellationToken cancellationToken);
+        Task RunAsync(CancellationToken cancellationToken);
     }
 
     /// <summary>Ordering hint for entry points (lower runs first). Default 0.</summary>
